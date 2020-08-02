@@ -16,9 +16,12 @@ for i in range(len(contentA)):
         if contentA[j] > contentA[j + 1]:
             contentA[j], contentA[j + 1] = contentA[j + 1], contentA[j]
 
+    for i in (len(contentB) < 6):
+        break
 
-        if len(contentB[j]) < 6:
-            break
 
+print(contentB)
+
+contentC =[]
 
 
