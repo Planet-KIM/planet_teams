@@ -3,8 +3,8 @@ import random
 import numpy as np
 
 contentA = []
-for i in range(10):
-    a = random.randint(1, 10)
+for i in range(100):
+    a = random.randint(1, 100)
     contentA.append(a)
 
 print(contentA)
@@ -13,15 +13,26 @@ contentB = []
 
 for i in range(len(contentA)):
     for j in range(len(contentA) - 1):
-        if contentA[j] > contentA[j + 1]:
+        if contentA[j] < contentA[j + 1]:
             contentA[j], contentA[j + 1] = contentA[j + 1], contentA[j]
 
-    for i in (len(contentB) < 6):
-        break
 
+for i in contentA:
+    contentB.append(i)
+
+    if len(contentB) == 5:
+        break
 
 print(contentB)
 
+
 contentC =[]
+for i in range(100):
+    if len(contentC) == 100:
+        break
+    contentC.append(i)
+print(contentC)
+
+print(np.corrcoef(contentC, contentA))
 
 
