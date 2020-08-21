@@ -9,23 +9,33 @@ graph = pd.DataFrame(content, columns = ['5', '6', '7', '8', '9', '10'])
 print(graph)
 
 graph.to_excel(excel_writer ='graph.xlsx')
-wb = openpyxl.load_workbook('graph.xlsx')
+#wb = openpyxl.Workbook()
+#wb.save('graph.xlsx')
 
-def nono(content):
-    counta = 0
-    for i in content:
-        countb= 0
-        for j in i:
+filename = 'graph.xlsx'
+wb = load_workbook(filename)
+ws = wb.active
 
-            if 0 < [counta][countb]:
-                content[counta][countb] = 1
+content = np.random.randn(10, 6)
+#graph = pd.DataFrame(content, columns = ['5', '6', '7', '8', '9', '10'])
 
-            else:
-                content[counta][countb] = 0
+counta = 0
+for i in content:
+    countb= 0
+    for j in i:
 
-            countb = countb + 1
-        counta = counta + 1
-    return content
-A = nono(content=content)
+        if 0 < content[counta][countb]:
+            content[counta][countb] = 1
 
-wbb = wb.creat_sheet('result')
+        else:
+            content[counta][countb] = 0
+
+        countb = countb + 1
+    counta = counta + 1
+
+A = pd.DataFrame(content, columns = ['11', '12', '13', '14', '15', '17'])
+#ws['H1'] = print(A)
+#wb.save('graph.xlsx')
+
+
+
