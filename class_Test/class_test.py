@@ -1,4 +1,5 @@
 # 클래스 만들고, sum이랑 곱하는 함수를 만들고 리스트를 변수로 생성
+
 import random
 
 array = []
@@ -38,23 +39,24 @@ class cal:
         return array1, array2
 
     def sum(self):
+        array1 = self.half()
 
         A = 0
-        for i in self.array:
+        for i in array1:
             A = A + i
 
         print("각 요소의 합은 {A}입니다.".format(A=A))
 
     def gob(self):
+        array2 = self.half()
 
         B = 0
-        for i in self.array:
+        for i in array2:
             B = B * i
 
         print("각 요소의 곱은 {B}입니다.".format(B=B))
 
     def complex(self):
-
 
 
 
