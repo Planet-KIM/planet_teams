@@ -6,12 +6,11 @@ import matplotlib.pylab as plt
 import time
 
 array = np.random.randn(5,5)
-newarray = []
 
 print(array)
 
-def graph(array,newarray):
-
+def graph(array):
+    newarray = []
     #array 배열 수 세주기
     count = 0
     for i in array:
@@ -33,13 +32,15 @@ def graph(array,newarray):
                 counta = counta + 1
 
     print(newarray)
-graph(array=array,newarray=newarray)
+    return newarray
+
+new = graph(array=array)
 
 def matplot(newarray):
 
     plt.plot(newarray)
     plt.show()
-matplot(newarray=newarray)
+matplot(newarray=new)
 
 
 start = time.time()
